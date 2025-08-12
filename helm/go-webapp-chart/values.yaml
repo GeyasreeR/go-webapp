@@ -5,7 +5,7 @@ replicaCount : 1
 # Image configuration
 image:
   repository: geyasreer/go-webapp:v1
-  tag: "v1"
+  tag: "16919552271"
   pullPolicy: IfNotPresent
 
 ingress:
