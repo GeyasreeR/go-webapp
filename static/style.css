@@ -1,0 +1,76 @@
+/* static/style.css */
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.bg-gradient {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+}
+
+.card-title {
+    color: #0077b6;
+}
+
+.feature-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
+
+footer {
+    background-color: #343a40;
+}
+
+body.dark-mode {
+    background-color: #322b2b;
+    color: #e0e0e0;
+}
+
+.card.dark-mode {
+background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+.bg-light.dark-mode {
+    background-color: #1e1e1e !important;
+}
+
+.btn-outline-secondary.dark-mode {
+    border-color: #bbb;
+    color: #bbb;
+}
+
+.dark-mode .btn-home {
+    background-color: #9b59b6;
+    color: #f0f0f0;
+}
+
+.dark-mode .btn-course {
+    background-color: #1abc9c;
+    color: #f0f0f0;
+}
+/* body, .card, .bg-light {
+    transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+/* Light mode styles */
+.btns {
+    background-color: #6f42c1; /* purple */
+    color: white;
+    border: none;
+}
+
+
+.btns:hover,
+.btns:hover {
+    opacity: 0.9;
+}
+
+/* Dark mode styles */
+.dark-mode .btns {
+    background-color: #9b59b6; /* softer purple */
+    color: #f0f0f0;
+}
+

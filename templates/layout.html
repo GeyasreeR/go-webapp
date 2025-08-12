@@ -1,0 +1,37 @@
+<!-- templates/layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Title}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+  
+
+</head>
+
+<body>
+    <header class="bg-gradient text-black py-4">
+        <div class="container text-center">
+            <h1>Learn and Grow</h1>
+            <nav class="mt-3">
+                <a class="btn btns mx-2" href="/">Home</a>
+                <a class="btn btns mx-2" href="/course">Course</a>
+                <a class="btn btns mx-2" href="/about">About</a>
+                <a class="btn btns mx-2" href="/blog">Blog</a>
+                <button id="darkToggle" class="btn btns btn-sm ms-auto">🌙 Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        {{template "content" .}}
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Website. Built with 💙 by Geyasree.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

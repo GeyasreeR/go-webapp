@@ -1,0 +1,64 @@
+# General application settings
+appName: my-web-app
+environment: development
+replicaCount : 1
+# Image configuration
+image:
+  repository: geyasreer/go-webapp:v1
+  tag: "v1"
+  pullPolicy: IfNotPresent
+
+ingress:
+  enabled: false
+
+  # Specify the Ingress class to be used (e.g., nginx, traefik)
+  className: ""
+  annotations: {}
+
+  # Define the hostnames for the Ingress
+  hosts:
+    - host: myapp.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: myapp-service
+              port:
+                number: 80
+
+  # Configure TLS for the Ingress
+  tls:
+    - secretName: myapp-tls-secret
+      hosts:
+        - myapp.example.com
+
+  # Add annotations to the Ingress resource
+  # annotations:
+  #   nginx.ingress.kubernetes.io/rewrite-target: /
+  #   cert-manager.io/cluster-issuer: letsencrypt-prod
+
+  # Optionally define a default backend if no rule matches
+  defaultBackend:
+    service:
+      name: default-backend-service
+      port:
+        number: 8080
+
+# Service configuration
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+# Resource requests and limits for the application pods
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+
+
