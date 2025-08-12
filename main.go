@@ -36,6 +36,7 @@ func blogHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+
 	http.HandleFunc("/", homeHandler)
 	http.HandleFunc("/course", courseHandler)
 	http.HandleFunc("/about", aboutHandler)
