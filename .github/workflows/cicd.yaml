@@ -25,7 +25,7 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: 1.22
-        cache: true
+        cache: false
 
     - name: Build
       run: go build -o go-webapp
@@ -90,6 +90,6 @@ jobs:
       run: |
         git config --global user.email "geyasree12@gmail.com"
         git config --global user.name "Geyasree"
-        git add helm/go-web-app-chart/values.yaml
+        git add helm/go-webapp-chart/values.yaml
         git commit -m "Update tag in Helm chart"
         git push
